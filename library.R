@@ -19,3 +19,5 @@ cat_function <- function(love=TRUE){
 
 setwd("./cats")
 document()
+
+#source: https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/

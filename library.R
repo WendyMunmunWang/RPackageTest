@@ -12,7 +12,7 @@ cat_function <- function(){
   library("eRm")
   res.rasch <- RM(raschdat1)
   pres.rasch <- person.parameter(res.rasch)
-  return(pres.rasch)
+  return(raschdat1)
 }
 
 setwd("./cats")

@@ -1,20 +1,18 @@
 #packages we need for building a package
 install.packages("devtools")
-library("devtools")
 devtools::install_github("klutometis/roxygen")
+library("devtools")
 library(roxygen2)
 
 #create package directory
 setwd("parent_directory")
 create("cats")
 
-cat_function <- function(love=TRUE){
-  if(love==TRUE){
-    print("I love cats!")
-  }
-  else {
-    print("I am not a cool person.")
-  }
+cat_function <- function(){
+  library("eRm")
+  res.rasch <- RM(raschdat1)
+  pres.rasch <- person.parameter(res.rasch)
+  return(pres.rasch)
 }
 
 setwd("./cats")

@@ -14,32 +14,63 @@ library("eRm")
 setwd("parent_directory")
 create("astromERM")
 
-#anova.llra function
-#Input params are object...
+fn_anova_eRm <- function(object, ...){
+  return(anova.eRm(object, ...))
+}
+
 fn_anova_llra <- function(object){
   return(anova(object))
 }
 
-#build_W function
-#Included all input params
 fn_build_W <- function(X, nitems, npoints, grp_n, groupvec, itmgrps){
   return(build_W(X, nitems, npoints, grp_n, groupvec, itmgrps))
 }
 
-#collapse_W
-#Included all input params
+fn_cldeviance <- function(object, groups.gr = "rawscore", pi.hat){
+  return(cldeviance(object, groups.gr = "rawscore", pi.hat))
+}
+
+fn_cmlprep <- function(X01,mt_vek,mpoints,Groups,W,gmemb){
+  return(cmlprep(X01,mt_vek,mpoints,Groups,W,gmemb))
+}
+
+fn_coef.eRm <- function(object, parm = "beta", ...) {
+  return(coef.eRm(object, parm="beta", ...))
+}
+
+fn_coefppar <- function(object, extrapolated = TRUE, ...) {
+  return(coef.ppar(object, extrapolated = TRUE, ...))
+}
+
 fn_collapse_W <- function(W, listItems, newNames){
   return(collapse_W(W, listItems, newNames))
 }
 
-#TODO: eRm.data
+fn_confint_eRm <- function(object, parm="beta", level = 0.95, ...){
+  return(confint.eRm(object, parm="beta", level = 0.95, ...))
+}
 
-#gofIRT function
+fn_confint_ppar <- function(object, parm, level = 0.95, ...){
+  return(confint.ppar(object, parm, level = 0.95, ...))
+}
+
 fn_gofIRT <- function(object, groups.h1, cutpoint){
   return(gofIRT(object, groups.h1 , cutpoint))
 }
 
-#IC function
+fn_confint_threshold <- function(object, parm, level = 0.95, ...){
+  return(confint.threshold(object, parm, level = 0.95, ...))
+}
+
+fn_cwdeviance <- function(object, pi.hat){
+  return(cwdeviance(object, pi.hat))
+}
+
+fn_datcheck.LRtest <- function(x, X, model){
+  return(datcheck.LRtest(x, X, model))
+}
+
+
 fn_IC <- function(object){
   return(IC(object))
 }

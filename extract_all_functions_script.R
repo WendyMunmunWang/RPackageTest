@@ -4,15 +4,15 @@ eRm_fn_dirs <- list.files(path = ".", pattern = NULL, all.files = FALSE, full.na
 eRm_fn_total <- length(eRm_fn_dirs)
 counter <- 1
 #=============================== Create Astrom library file ===================================
-libPath<-file("/Users/wendywang/Dropbox/RPackage/RPackageTest/AstromERM.R")
+filePath<-file("/Users/wendywang/Dropbox/RPackage/RPackageTest/AstromERM.R")
 
 #=============================== Astrom library starts here ====================================
-while (counter < eRm_fn_total){
+while (counter < 2){
   print(counter)
   fnPath <- file(eRm_fn_dirs[counter], open="r")
   line <- readLines(fnPath, n=1)
   print(line)
-  write(line, file=libPath, append=TRUE, sep = "\n")
+  write(counter, filePath, append=TRUE, sep = "\n")
   close(fnPath)
   counter <- counter + 1
 }

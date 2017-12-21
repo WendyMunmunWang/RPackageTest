@@ -1,14 +1,13 @@
 #download packages if you haven't yet
-packages <- c("devtools", "eRm", "devtools")
+packages <- c("devtools", "eRm")
 if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
   install.packages(setdiff(packages, rownames(installed.packages())))  
-  devtools::install_github("klutometis/roxygen")
 }
-
+devtools::install_github("klutometis/roxygen")
 #include libraries
+library("eRm")
 library("devtools")
 library(roxygen2)
-library("eRm")
 
 #create package directory
 setwd("parent_directory")
@@ -70,31 +69,113 @@ fn_datcheck.LRtest <- function(x, X, model){
   return(datcheck.LRtest(x, X, model))
 }
 
+fn_datcheck <- function(X, W, mpoints, groupvec, model){
+  return(datcheck(X, W, mpoints, groupvec, model))
+}
+
+fn_datprep_LLTM <- function(X,W,mpoints,Groups,sum0){
+  return(datprep_LLTM(X,W,mpoints,Groups,sum0))
+}
+
+fn_datprep_LPCM <- function(X,W,mpoints,Groups,sum0) {
+  return(datprep_LPCM(X,W,mpoints,Groups,sum0))
+}
+
+fn_datprep_LRSM <- function(X,W,mpoints,Groups,sum0){
+  return(datprep_LRSM(X,W,mpoints,Groups,sum0))
+}
+
+fn_datprep_PCM <- function(X,W,sum0){
+  return(datprep_PCM(X,W,sum0))
+}
+
+fn_datprep_RM <- function(X,W,sum0) {
+  return(datprep_RM(X,W,sum0))
+} 
+
+fn_datprep_RSM <- function(X,W,sum0){
+  return(datprep_RSM(X,W,sum0))
+}
+
+fn_fitcml <- function(mt_ind, nrlist, x_mt, rtot, W, ngroups, gind, x_mtlist, NAstruc, g_NA, st.err, etaStart, gby){
+  return(fitcml(mt_ind, nrlist, x_mt, rtot, W, ngroups, gind, x_mtlist, NAstruc, g_NA, st.err, etaStart, gby))
+}
+
+fn_gofIRT.ppar <- function(object, groups.hl = 10, cutpoint = 0.5) {
+  return(gofIRT.ppar(object, groups.hl = 10, cutpoint = 0.5))
+}
+
+fn_gofIRT <- function(object, groups.hl = 10, cutpoint = 0.5){
+  return(gofIRT(object, groups.hl = 10, cutpoint = 0.5))
+}
+
+fn_hoslem <- function(object, groups.hl = 10, pi.hat){
+  return(hoslem(object, groups.hl = 10, pi.hat))
+}
 
 fn_IC <- function(object){
   return(IC(object))
 }
 
-#itemfit.ppar function
+fn_invalid <- function(x){
+  return(invalid(x))
+}
+
+fn_i_info<-function(hvec,itembeta,theta){
+  return(i_info(hvec,itembeta,theta))
+}
+
 fn_itemfit_ppar <- function(object, x, visible){
   return(itemfit.ppar(object, x, visible))
 }
 
-#item_info function
+fn_itemfit <- function(object){
+  return(itemfit(object))
+}
+
 fn_item_info <- function(ermobject, theta, hvec, itembeta){
   return(item_info(ermobject, theta, hvec, itembeta))
 }
 
-#LLRA function
+fn_labeling_internal <- function(model,X,X01,W,etapar,betapar,mpoints,ngroups){
+  return(labeling.internal(model,X,X01,W,etapar,betapar,mpoints,ngroups))
+}
+
+fn_llra_datprep<-function(X, mpoints, groups, baseline=NULL){
+  return(llra.datprep(X, mpoints, groups, baseline=NULL))
+}
+
 fn_LLRA <- function(X, W, mpoints, groups, baseline, itmgrps, x){
   return(LLRA(X, W, mpoints, groups, baseline, itmgrps, x))
 }
 
-#llra.datprep function
+fn_LLTM <- function(X, W, mpoints = 1, groupvec = 1, se = TRUE, sum0 = TRUE, etaStart){
+  return(LLTM(X, W, mpoints = 1, groupvec = 1, se = TRUE, sum0 = TRUE, etaStart))
+}
+
+fn_likLR <- function(X, W, mpoints, Groups, model, st.err, sum0, etaStart){
+  return(likLR(X, W, mpoints, Groups, model, st.err, sum0, etaStart))
+}
+
 fn_llra_datprep <- function(X, mpoints, groups, baseline){
   return(llra.datprep(X, mpoints, groups, baseline))
 }
 
+fn_logLik_eRm <- function(object,...){
+  return(logLik.eRm(object,...))
+}
+
+fn_logLik.ppar <- function(object,...){
+  return(logLik.ppar(object,...))
+}
+
+fn_LPCM <- function(X, W, mpoints = 1, groupvec = 1, se = TRUE, sum0 = TRUE, etaStart) {
+  return(LPCM(X, W, mpoints = 1, groupvec = 1, se = TRUE, sum0 = TRUE, etaStart))
+}
+
+fn_LRSM <- function(X, W, mpoints = 1, groupvec = 1, se = TRUE, sum0 = TRUE, etaStart) {
+  return(LRSM(X, W, mpoints = 1, groupvec = 1, se = TRUE, sum0 = TRUE, etaStart))
+}
 
 setwd("./cats")
 document()

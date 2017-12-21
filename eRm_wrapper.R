@@ -177,6 +177,279 @@ fn_LRSM <- function(X, W, mpoints = 1, groupvec = 1, se = TRUE, sum0 = TRUE, eta
   return(LRSM(X, W, mpoints = 1, groupvec = 1, se = TRUE, sum0 = TRUE, etaStart))
 }
 
+fn_LRtest <- function(object, splitcr = "median", se = TRUE){
+  return(LRtest(object, splitcr = "median", se = TRUE))
+}
+
+fn_LRtest_Rm <-function(object, splitcr = "median", se = TRUE) {
+  return(LRtest.Rm(object, splitcr = "median", se = TRUE))
+}
+
+fn_MLoef <- function(robj, splitcr="median"){
+  return(MLoef(robj, splitcr="median"))
+}
+
+fn_model_matrix_eRm <- function(object,...){
+  return(model.matrix.eRm(object,...))
+}
+
+fn_NPtest <- function(obj, n=NULL, method="T1", ...){
+  return(NPtest(obj, n=NULL, method="T1", ...))
+}
+
+fn_PCM <- function(X, W, se = TRUE, sum0 = TRUE, etaStart){
+  return(PCM(X, W, se = TRUE, sum0 = TRUE, etaStart))
+}
+
+fn_performance <- function(prediction.obj, measure, x.measure="cutoff", ...) {
+  return(performance(prediction.obj, measure, x.measure="cutoff", ...))
+}
+
+fn_person_parameter_eRm <- function(object){
+  return(person.parameter.eRm(object))
+}
+
+fn_person_parameter <- function(object){
+  return(person.parameter(object))
+}
+
+fn_personfit_ppar <- function(object){
+  return(personfit.ppar(object))
+}
+
+fn_personfit <- function(object){
+  return(personfit(object))
+}
+
+fn_phi_range <- function(mat){
+  return(phi.range(mat))
+}
+
+fn_pifit_internal <- function(object){
+  return(pifit.internal(object))
+}
+
+fn_plist_internal <- function(object, theta){
+  return(plist.internal(object, theta))
+}
+
+fn_plot.ppar <- function(x, xlab = "Person Raw Scores", ylab = "Person Parameters (Theta)", main = NULL, ...){
+  return(plot.ppar(x, xlab = "Person Raw Scores", ylab = "Person Parameters (Theta)", main = NULL, ...))
+}
+
+fn_plotCI <- function (x,
+                    y = NULL,
+                    uiw,
+                    liw = uiw,
+                    ui,
+                    li,
+                    
+                    err='y',
+                    ylim=NULL,
+                    xlim=NULL,
+                    type="p",
+                    
+                    col=par("col"),
+                    barcol=col,
+                    pt.bg = par("bg"),
+                    
+                    sfrac = 0.01,
+                    gap=1,
+                    
+                    lwd=par("lwd"),
+                    lty=par("lty"),
+                    
+                    labels=FALSE,
+                    
+                    add=FALSE,
+                    xlab,
+                    ylab,
+                    
+                    minbar,
+                    maxbar,
+                    ...
+){
+  return(plotCI(x,
+                             y = NULL,
+                             uiw,
+                             liw = uiw,
+                             ui,
+                             li,
+                             
+                             err='y',
+                             ylim=NULL,
+                             xlim=NULL,
+                             type="p",
+                             
+                             col=par("col"),
+                             barcol=col,
+                             pt.bg = par("bg"),
+                             
+                             sfrac = 0.01,
+                             gap=1,
+                             
+                             lwd=par("lwd"),
+                             lty=par("lty"),
+                             
+                             labels=FALSE,
+                             
+                             add=FALSE,
+                             xlab,
+                             ylab,
+                             
+                             minbar,
+                             maxbar,
+                             ...
+  ))
+}
+
+fn_plotDIF <- function(object, item.subset=NULL, gamma = 0.95, main=NULL,
+                    xlim=NULL, xlab=" ", ylab=" ", col=NULL, distance,
+                    splitnames=NULL, leg=FALSE, legpos="bottomleft", ...){
+  return(plotDIF(object, item.subset=NULL, gamma = 0.95, main=NULL,
+                             xlim=NULL, xlab=" ", ylab=" ", col=NULL, distance,
+                             splitnames=NULL, leg=FALSE, legpos="bottomleft", ...))
+}
+
+fn_plotGOF_LR <- function(
+  x,
+  beta.subset = "all",
+  main = "Graphical Model Check",
+  xlab,
+  ylab,
+  tlab = "item",
+  xlim,
+  ylim,
+  type = "p",
+  pos = 4,
+  conf = NULL,
+  ctrline = NULL,
+  asp = 1,
+  x_axis = TRUE,
+  y_axis = TRUE,
+  set_par = TRUE,
+  reset_par = TRUE,
+  ...
+){
+  return(plotGOF.LR(
+    x,
+    beta.subset = "all",
+    main = "Graphical Model Check",
+    xlab,
+    ylab,
+    tlab = "item",
+    xlim,
+    ylim,
+    type = "p",
+    pos = 4,
+    conf = NULL,
+    ctrline = NULL,
+    asp = 1,
+    x_axis = TRUE,
+    y_axis = TRUE,
+    set_par = TRUE,
+    reset_par = TRUE,
+    ...
+  ))
+}
+  
+fn_plotGOF <- function(x, ...) {
+  return(plotGOF(x, ...))
+}
+
+fn_plotGR <- function(object,...){
+  return(plotGR(object,...))
+}
+
+fn_plotICC <- function(object, ...){
+  return(plotICC(object, ...))
+}
+
+fn_plotICC_Rm <- function(
+  object,
+  item.subset = "all",
+  empICC = NULL,
+  empCI = NULL,
+  mplot = NULL,    # ask,mplot added rh 2007-12-01
+  xlim = c(-4,4),
+  ylim = c(0,1),
+  xlab = "Latent Dimension",
+  ylab = "Probability to Solve",
+  main = NULL,       # main rh 2010-03-06
+  col = NULL,
+  lty = 1,
+  legpos = "left",
+  ask = TRUE,
+  ...)
+{
+  return(plotICC.Rm(
+    object,
+    item.subset = "all",
+    empICC = NULL,
+    empCI = NULL,
+    mplot = NULL,    # ask,mplot added rh 2007-12-01
+    xlim = c(-4,4),
+    ylim = c(0,1),
+    xlab = "Latent Dimension",
+    ylab = "Probability to Solve",
+    main = NULL,       # main rh 2010-03-06
+    col = NULL,
+    lty = 1,
+    legpos = "left",
+    ask = TRUE,
+    ...))
+}
+
+fn_plotINFO <- function(ermobject, type = "both", theta = seq(-6, 6, length.out = 1001L), ...){
+  return(plotINFO(ermobject, type = "both", theta = seq(-6, 6, length.out = 1001L), ...))
+}
+  
+fn_plotjointICC_dRm <- function(
+  object,
+  item.subset = "all",
+  legend = TRUE,
+  xlim = c(-4, 4),
+  ylim = c(0, 1),
+  xlab = "Latent Dimension",
+  ylab = "Probability to Solve",
+  lty = 1,
+  legpos="topleft",
+  main = "ICC plot",
+  col = NULL,
+  ...
+){ return(plotjointICC.dRm(
+    object,
+    item.subset = "all",
+    legend = TRUE,
+    xlim = c(-4, 4),
+    ylim = c(0, 1),
+    xlab = "Latent Dimension",
+    ylab = "Probability to Solve",
+    lty = 1,
+    legpos="topleft",
+    main = "ICC plot",
+    col = NULL,
+    ...
+  ))
+}
+
+fn_plotjointICC <- function(object, ...){
+  return(plotjointICC(object, ...))
+}
+
+fn_plotPImap <-function(object, item.subset="all", sorted = FALSE, main="Person-Item Map",
+           latdim="Latent Dimension", pplabel="Person\nParameter\nDistribution",
+           cex.gen=0.7, xrange=NULL,
+           warn.ord=TRUE, warn.ord.colour="black",
+           irug=TRUE, pp=NULL){
+  return(plotPImap(object, item.subset="all", sorted = FALSE, main="Person-Item Map",
+                    latdim="Latent Dimension", pplabel="Person\nParameter\nDistribution",
+                    cex.gen=0.7, xrange=NULL,
+                    warn.ord=TRUE, warn.ord.colour="black",
+                    irug=TRUE, pp=NULL))
+}
+
+
 setwd("./cats")
 document()
 

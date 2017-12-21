@@ -449,6 +449,102 @@ fn_plotPImap <-function(object, item.subset="all", sorted = FALSE, main="Person-
                     irug=TRUE, pp=NULL))
 }
 
+fn_plotPWmap <- function(object, pmap=FALSE, imap=TRUE, item.subset="all", person.subset="all",
+           mainitem="Item Map", mainperson="Person Map",
+           mainboth="Item/Person Map", latdim="Latent Dimension",
+           tlab="Infit t statistic", pp=NULL, cex.gen=0.6, cex.pch=1,
+           person.pch=1, item.pch=16, personCI=NULL, itemCI=NULL, horiz=FALSE) {
+  return(plotPWmap(object, pmap=FALSE, imap=TRUE, item.subset="all", person.subset="all",
+                    mainitem="Item Map", mainperson="Person Map",
+                    mainboth="Item/Person Map", latdim="Latent Dimension",
+                    tlab="Infit t statistic", pp=NULL, cex.gen=0.6, cex.pch=1,
+                    person.pch=1, item.pch=16, personCI=NULL, itemCI=NULL, horiz=FALSE))
+}
+
+fn_plotTR <-function(object,...){
+  return(plotTR(object,...))
+}
+
+fn_pmat_default <- function(object){
+  return(pmat.default(object))
+}
+
+fn_pmat_ppar <- function(object){
+  return(pmat.ppar(object))
+}
+
+fn_pmat <- function(object){
+  return(pmat(object))
+}
+
+fn_predict_ppar <- function(object, cutpoint = "randomized", ...){
+  return(predict.ppar(object, cutpoint = "randomized", ...))
+}
+
+fn_prediction <- function(predictions, labels, label.ordering=NULL) {
+  return(prediction(predictions, labels, label.ordering=NULL))
+}
+
+fn_print_eRm <- function(x,...)  { 
+  return(print.eRm(x,...))
+}
+
+fn_print_gof <- function(x, ...){
+  return(print.gof(x, ...))
+}
+
+fn_print_ICr <- function(x,...){
+  return(print.ICr(x,...))
+}
+
+fn_print_ifit <- function(x, visible=TRUE, ...){
+  return(print.ifit(x, visible=TRUE, ...))
+}
+
+fn_print_llra <- function(x,...){
+  return(print.llra(x,...))
+}
+
+fn_print_logLik_eRm <- function (x, digits = getOption("digits"),...){
+  return(print.logLik.eRm(x, digits = getOption("digits"),...))
+}
+
+fn_print_logLik_ppar <- function (x, digits = getOption("digits"),...){
+  return(print.logLik.ppar(x, digits = getOption("digits"),...))
+}
+
+fn_print_LR <- function(x,...) {
+  return(print.LR(x,...))
+}
+
+fn_print_MLoef <- function(x,...){
+  return(print.MLoef(x,...))
+}
+
+fn_print_pfit <- function(x, visible=TRUE, ...){
+  return(print.pfit(x, visible=TRUE, ...))
+}
+
+fn_print_ppar <- function(x,...){
+  return(print.ppar(x,...))
+}
+
+fn_print_resid <- function(x,...){
+  return(print.resid(x,...))
+}
+
+fn_print_step <- function(x, ...){
+  return(print.step(x, ...))
+}
+
+fn_print_summary_llra <- function(x,...){
+  return(print.summary.llra(x,...))
+}
+
+fn_print_threshold <- function(x,...){
+  return(print.threshold(x,...))
+}
+
 
 setwd("./cats")
 document()

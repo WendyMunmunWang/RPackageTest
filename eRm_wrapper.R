@@ -545,6 +545,153 @@ fn_print_threshold <- function(x,...){
   return(print.threshold(x,...))
 }
 
+fn_print_wald <- function(x,...) {
+  return(print.wald(x,...))
+}
+
+fn_residuals_ppar <- function(object,...){
+  return(residuals.ppar(object,...))
+}
+
+fn_RM <- function(X, W, se = TRUE, sum0 = TRUE, etaStart){
+  return(RM(X, W, se = TRUE, sum0 = TRUE, etaStart))
+}
+
+fn_rostdeviance <- function(object){
+  return(rostdeviance (object))
+}
+
+fn_rsampler <- function(inpmat,controls=rsctrl()){
+  return(rsampler(inpmat,controls=rsctrl()))
+}
+
+fn_rsctrl <- function(burn_in=100, n_eff=100, step=16, seed=0, tfixed=FALSE){
+  return(rsctrl(burn_in=100, n_eff=100, step=16, seed=0, tfixed=FALSE))
+}
+
+fn_rserror <- function(err){
+  return(rserror(err))
+}
+
+fn_rsextrmat <- function(RSobj, mat.no = 1){
+  return(rsextrmat(RSobj, mat.no = 1))
+}
+
+fn_rsextrobj <- function(RSobj,start=1,end=8192) {
+  return(rsextrobj(RSobj,start=1,end=8192))
+}
+
+fn_RSM <- function(X, W, se = TRUE, sum0 = TRUE, etaStart) {
+  return(RSM(X, W, se = TRUE, sum0 = TRUE, etaStart))
+}
+
+fn_Rsquared <- function(object, pi.hat){
+  return(Rsquared(object, pi.hat))
+}
+
+fn_rstats <- function(RSobj,userfunc,...){
+  return(rstats(RSobj,userfunc,...))
+}
+
+fn_rsunpack <- function(x,n,k,nwords,userfunc,...){
+  return(rsunpack(x,n,k,nwords,userfunc,...))
+}
+
+fn_SepRel <- function (pobject){ 
+  return(SepRel(pobject))
+}
+
+fn_sim_2pl <- function(persons, items, discrim = 0.25, seed = NULL, cutpoint = "randomized"){
+  return(sim.2pl(persons, items, discrim = 0.25, seed = NULL, cutpoint = "randomized"))
+}
+
+fn_sim_locdep <- function(persons, items, it.cor = 0.25, seed = NULL, cutpoint = "randomized"){
+  return(sim.locdep(persons, items, it.cor = 0.25, seed = NULL, cutpoint = "randomized"))
+}
+
+fn_sim_rasch <-function(persons, items, seed = NULL, cutpoint = "randomized"){
+  return(sim.rasch(persons, items, seed = NULL, cutpoint = "randomized"))
+}
+
+fn_sim_xdim <- function(persons, items, Sigma, weightmat, seed = NULL, cutpoint = "randomized"){
+  return(sim.xdim(persons, items, Sigma, weightmat, seed = NULL, cutpoint = "randomized"))
+}
+
+fn_stepwiseIt_eRm <- function(object, criterion = list("itemfit"), alpha = 0.05, verbose = TRUE,
+                              maxstep = NA){
+  return(stepwiseIt.eRm(object, criterion = list("itemfit"), alpha = 0.05, verbose = TRUE,
+                                    maxstep = NA))
+}
+
+fn_stepwiseIt <- function(object, criterion = list("itemfit"), alpha = 0.05, verbose = TRUE,
+           maxstep = NA) {
+  return(stepwiseIt(object, criterion = list("itemfit"), alpha = 0.05, verbose = TRUE,
+                    maxstep = NA))
+}
+
+fn_summary_eRm <- function(object,...){
+  return(summary.eRm(object,...))
+}
+
+fn_summary_gof <- function(object, ...){
+  return(summary.gof(object, ...))
+}
+
+fn_summary_llra <- function(object, level=0.95, ...){
+  return(summary.llra(object, level=0.95, ...))
+}
+
+fn_summary_LR <- function(object,...){
+  return(summary.LR(object,...))
+}
+
+fn_summary_MLoef <- function(object, ...){
+  return(summary.MLoef(object, ...))
+}
+
+fn_summary_ppar <- function(object,...){
+  return(summary.ppar(object,...))
+}
+
+fn_summary_RSctr <- function(object,...){
+  return(summary.RSctr(object,...))
+}
+
+fn_summary_RSmpl <- function(object,...){
+  return(summary.RSmpl(object,...))
+}
+
+fn_summary_RSmplext <- function(object,...){
+  return(summary.RSmplext(object,...))
+}
+
+fn_summary_threshold <- function(object,...){
+  return(summary.threshold(object,...))
+}
+
+fn_test_info <- function(ermobject,theta=seq(-5,5,0.01)){
+  return(test_info(ermobject,theta=seq(-5,5,0.01)))
+}
+
+fn_thresholds_eRm <- function(object){
+  return(thresholds.eRm(object))
+} 
+
+fn_thresholds <- function(object){
+  return(thresholds(object))
+}
+
+fn_vcov_eRm <- function(object,...){
+  return(vcov.eRm(object,...))
+}
+
+fn_Waldtest <- function(object,splitcr="median"){
+  return(Waldtest(object,splitcr="median"))
+}
+
+fn_Waldtest_Rm <- function(object, splitcr = "median"){
+  return(Waldtest.Rm(object, splitcr = "median"))
+}
 
 setwd("./cats")
 document()
